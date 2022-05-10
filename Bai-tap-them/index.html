@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nguyễn Hồng Trang _ Bài tập JS buổi 15 (thêm)</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--=============================Bài 1======================================-->
+    <div class="card w-50 mx-auto my-5">
+      <div class="card-header">
+        <h1>Tính thuế thu nhập cá nhân</h1>
+      </div>
+      <div class="card-body">
+        <label for="name" class="form-label">Họ tên</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Nhập họ tên"
+          class="form-control mb-3"
+        />
+        <label for="yearSalary" class="form-label"
+          >Tổng thu nhập năm (triệu)</label
+        >
+        <input
+          type="number"
+          id="yearSalary"
+          placeholder="Nhập số tiền"
+          class="form-control mb-3"
+        />
+        <label for="dependentPerson" class="form-label">Người phụ thuộc</label>
+        <input
+          type="number"
+          id="dependentPerson"
+          placeholder="Nhập số người"
+          class="form-control"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <button class="btn btn-success" onclick="tax()">Tính thuế</button>
+      </div>
+      <div class="card-footer text-muted">
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <!--======================================Bài 2===============================-->
+    <div class="card w-50 mx-auto my-5">
+      <div class="card-header">
+        <h1>Tính tiền cáp</h1>
+      </div>
+      <div class="card-body">
+        <span>Loại khách hàng</span>
+        <div class="mb-3 mt-2">
+          <input type="radio" name="selector" id="household" onchange="showOff()" /> Nhà dân
+          <input type="radio" name="selector" class="ms-5" id="company" onchange="showUp()" />
+          Doanh nghiệp
+        </div>
+
+        <label for="customer" class="form-label">Mã khách hàng</label>
+        <input
+          type="text"
+          id="customer"
+          placeholder="Nhập mã khách hàng"
+          class="form-control mb-3"
+        />
+        <label for="VIPchanelNumber" class="form-label">Kênh cao cấp</label>
+        <input
+          type="number"
+          id="VIPchanelNumber"
+          placeholder="Nhập số kênh"
+          class="form-control mb-3"
+        />
+        <div id="connectShowUp" style="display: none">
+          <label for="connectNumber" class="form-label">Số kết nối đầu</label>
+          <input
+            type="number"
+            id="connectNumber"
+            placeholder="Nhập số kết nối"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="text-center mb-3">
+        <button class="btn btn-success" onclick="cableCost()">Tính tiền cáp</button>
+      </div>
+      <div class="card-footer text-muted">
+        <p id="inputCost"></p>
+      </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
